@@ -1,5 +1,4 @@
-namespace Comanda.WebApi.Entities.Enums;
-
+namespace Comanda.WebApi.Entities;
 public enum EPaymentStatus
 {
     Pending,

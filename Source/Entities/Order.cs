@@ -10,9 +10,7 @@ public sealed class Order : Entity
 
     public ICollection<OrderItem> Items { get; set; } = [];
     public EOrderStatus Status { get; set; }
-
     public EPaymentMethod PaymentMethod { get; set; }
-    public EPaymentStatus PaymentStatus { get; set; }
 
     public DateTime Date { get; set; }
 

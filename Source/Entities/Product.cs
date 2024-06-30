@@ -8,6 +8,7 @@ public sealed class Product : Entity
     public decimal Price { get; set; }
 
     public Category Category { get; set; }
+    public Establishment Establishment { get; set; }
 
     public Product()
     {

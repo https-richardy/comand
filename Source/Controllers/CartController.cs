@@ -28,4 +28,14 @@ public sealed class CartController(IMediator mediator) : ControllerBase
 
         return StatusCode(response.StatusCode, response);
     }
+
+    [HttpPost("checkout")]
+    [Authorize(Roles = "Customer")]
+    public async Task<IActionResult> CheckoutAsync(CheckoutRequest request)
+    {
+        request.UserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+        var response = await mediator.Send(request);
+        return StatusCode(response.StatusCode, response);
+    }
 }

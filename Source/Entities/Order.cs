@@ -2,13 +2,13 @@ namespace Comanda.WebApi.Entities;
 
 public sealed class Order : Entity
 {
-    public decimal Total => OrderItems.Sum(item => item.Price);
+    public decimal Total => Items.Sum(item => item.Product.Price);
 
     public Establishment Establishment { get; set; }
     public Customer Customer { get; set; }
     public Address ShippingAddress { get; set; }
 
-    public ICollection<OrderItem> OrderItems { get; set; } = [];
+    public ICollection<OrderItem> Items { get; set; } = [];
     public EOrderStatus Status { get; set; }
     public EPaymentStatus PaymentStatus { get; set; }
     public DateTime Date { get; set; }

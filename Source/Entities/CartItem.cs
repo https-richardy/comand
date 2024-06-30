@@ -18,4 +18,13 @@ public sealed class CartItem : Entity
         Quantity = quantity;
         Product = product;
     }
+
+    public static implicit operator OrderItem(CartItem item)
+    {
+        return new OrderItem
+        {
+            Product = item.Product,
+            Quantity = item.Quantity
+        };
+    }
 }

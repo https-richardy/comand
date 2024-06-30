@@ -17,5 +17,11 @@ public static class ValidationExtension
         services.AddTransient<IValidator<EstablishmentCategoryRegistrationRequest>, EstablishmentCategoryRegistrationValidator>();
 
         #endregion
+
+        #region  validators for cart requests
+
+        services.AddTransient<IValidator<CheckoutRequest>, CheckoutValidator>();
+
+        #endregion
     }
 }

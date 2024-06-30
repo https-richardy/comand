@@ -6,6 +6,7 @@ public sealed class Order : Entity
 
     public Establishment Establishment { get; set; }
     public Customer Customer { get; set; }
+    public Address ShippingAddress { get; set; }
 
     public ICollection<OrderItem> OrderItems { get; set; } = [];
     public EOrderStatus Status { get; set; }

@@ -32,5 +32,11 @@ public static class MediatorExtension
         services.AddScoped<IRequestHandler<CheckoutRequest, Response<CheckoutResponse>>, CheckoutHandler>();
 
         #endregion
+
+        #region handlers for profile requests
+
+        services.AddScoped<IRequestHandler<RegisterAddressRequest, Response>, RegisterAddressHandler>();
+
+        #endregion
     }
 }

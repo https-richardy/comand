@@ -53,7 +53,7 @@ namespace Comanda.WebApi.Data.Migrations
                 column: "ShippingAddressId",
                 principalTable: "Addresses",
                 principalColumn: "Id",
-                onDelete: ReferentialAction.Cascade);
+                onDelete: ReferentialAction.NoAction);
 
             migrationBuilder.AddForeignKey(
                 name: "FK_Products_Establishments_EstablishmentId",

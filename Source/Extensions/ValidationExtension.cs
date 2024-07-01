@@ -23,5 +23,11 @@ public static class ValidationExtension
         services.AddTransient<IValidator<CheckoutRequest>, CheckoutValidator>();
 
         #endregion
+
+        #region validators for profile requests
+
+        services.AddTransient<IValidator<RegisterAddressRequest>, RegisterAddressValidator>();
+
+        #endregion
     }
 }

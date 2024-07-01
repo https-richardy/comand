@@ -1,6 +1,6 @@
 namespace Comanda.WebApi.Validators;
 
-public class RegisterAddressValidator :
+public sealed class RegisterAddressValidator :
     AbstractValidator<RegisterAddressRequest>,
     IValidator<RegisterAddressRequest>
 {

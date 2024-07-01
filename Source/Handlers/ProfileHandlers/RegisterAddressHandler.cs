@@ -25,6 +25,8 @@ public sealed class RegisterAddressHandler(
             throw new ValidationException(validationResult.Errors);
 
         var address = await addressService.GetByZipCodeAsync(request.PostalCode);
+
+        address.Number = request.Number;
         customer.Addresses.Add(address);
 
         await customerRepository.UpdateAsync(customer);

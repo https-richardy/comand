@@ -12,4 +12,10 @@ public sealed class ComandaDbContext(DbContextOptions options) : IdentityDbConte
     public DbSet<CartItem> CartItems { get; set; }
     public DbSet<Customer> Customers { get; set; }
     public DbSet<Address> Addresses { get; set; }
+
+    protected override void OnModelCreating(ModelBuilder builder)
+    {
+        base.OnModelCreating(builder);
+        builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+    }
 }
